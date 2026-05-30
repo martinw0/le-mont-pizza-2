@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,  viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pizzeria LeMont — Pizza artisanale au four à bois</title>
 <meta name="description" content="Pizzeria LeMont — Pizzas artisanales cuites au four à bois, pâte maison, ingrédients frais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,23 +41,12 @@
   .ital{font-style:italic;font-weight:500}
 
   /* ---------- NAV ---------- */
-  body::before{
-    content:"";position:fixed;left:0;right:0;top:0;
-    height:env(safe-area-inset-top,0px);
-    background:var(--cream);z-index:1001;
-    transform:translateZ(0);-webkit-transform:translateZ(0);
-  }
   nav{
-    position:fixed;top:0;left:0;right:0;z-index:1000;
+    position:-webkit-sticky;position:sticky;top:0;z-index:1000;
     display:flex;justify-content:space-between;align-items:center;
     padding:16px 5vw;
-    padding-top:calc(16px + env(safe-area-inset-top));
-    padding-left:calc(5vw + env(safe-area-inset-left));
-    padding-right:calc(5vw + env(safe-area-inset-right));
     background:var(--cream);
     border-bottom:1px solid transparent;transition:.35s;
-    transform:translateZ(0);-webkit-transform:translateZ(0);
-    isolation:isolate;-webkit-backface-visibility:hidden;
   }
   nav.scrolled{box-shadow:0 6px 24px rgba(58,35,23,.08);border-bottom-color:rgba(138,44,28,.12);padding:10px 5vw}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
